@@ -2,36 +2,43 @@
 <html>
 <head>
   <title>Smart Notice Board</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-<h1>📢 Smart Notice Board</h1>
+  <div class="top-bar">
+    <h1>📢 Smart Notice Board</h1>
+    <button onclick="toggleMode()">🌙 / ☀️</button>
+  </div>
 
-<!-- LOGIN -->
-<div id="login-box">
-  <h2>Login</h2>
-  <input type="email" id="email" placeholder="Email"><br>
-  <input type="password" id="password" placeholder="Password"><br>
-  <button onclick="login()">Login</button>
-</div>
+  <!-- LOGIN -->
+  <div id="login-box">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+  </div>
 
-<!-- ADMIN PANEL -->
-<div id="admin-panel" style="display:none;">
-  <h2>👨‍🏫 Teacher Panel</h2>
-  <input type="text" id="title" placeholder="Title"><br>
-  <textarea id="content" placeholder="Content"></textarea><br>
-  <button onclick="addNotice()">Add Notice</button>
-  <button onclick="logout()">Logout</button>
-</div>
+  <!-- ADMIN PANEL -->
+  <div id="admin-panel" style="display:none;">
+    <h2>👨‍🏫 Teacher Panel</h2>
+    <input type="text" id="title" placeholder="Title"><br>
+    <textarea id="content" placeholder="Content"></textarea><br>
+    <button onclick="addNotice()">Add Notice</button>
+    <button onclick="logout()">Logout</button>
+  </div>
 
-<!-- NOTICE LIST -->
-<div id="notice-section" style="display:none;">
-  <h2>📜 Notices</h2>
-  <div id="notice-list"></div>
-</div>
+  <!-- NOTICE SECTION -->
+  <div id="notice-section" style="display:none;">
+    <h2>📜 Notices</h2>
+    <div id="notice-list"></div>
+  </div>
 
 </div>
 
